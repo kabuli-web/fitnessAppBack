@@ -1,0 +1,43 @@
+POST http://localhost:5000/test
+content-type: application/json
+
+{
+    "status": 200,
+    "success": true,
+    "data": {
+        "id": 1708585772,
+        "name": "Demo",
+        "email": "adir62uobsdkterk@aliases.work",
+        "mobile": "500000000",
+        "role": "user",
+        "created_at": "2021-08-03 10:29:59",
+        "store": {
+            "id": 337211599,
+            "owner_id": 1708585772,
+            "owner_name": "Demo",
+            "username": "dev-czasdasfadgsdgd",
+            "name": "dev-czasdasfadgsdgd",
+            "avatar": "https://i.ibb.co/jyqRQfQ/avatar-male.webp",
+            "store_location": null,
+            "plan": "team",
+            "status": "active",
+            "created_at": "2021-08-03 10:29:59"
+        }
+    }
+}
+###
+POST https://accounts.salla.sa/oauth2/token?client_id=c10497bda6abad559d6f71cd2eb47e6d&client_secret=a4e2fded03f6996afb0721be26227f58&code=3xi2HDFzN1rg8LjYCwvXiCLaW_ajy_W37rmVw5DIJNs.L5abzVoiG6glp5KaBlhqaH_LNdMiVkgy4uhNPu26CDk&grant_type=authorization_code
+Content-Type: application/x-www-form-urlencoded
+
+{
+    "code":"3xi2HDFzN1rg8LjYCwvXiCLaW_ajy_W37rmVw5DIJNs.L5abzVoiG6glp5KaBlhqaH_LNdMiVkgy4uhNPu26CDk",
+    "grant_type":"authorization_code"
+}
+###
+
+POST https://accounts.salla.sa/oauth2/token?client_id=c10497bda6abad559d6f71cd2eb47e6d&client_secret=a4e2fded03f6996afb0721be26227f58&code=h3B6K-9C7dfe0mKDSvAKHODtWnxG_uBGbMyGjNfebgI.8uSnMtvDQGQNi4M4pzH01N3sBmRSrz-gIoK3ej6tHHc&grant_type=authorization_code&scope=settings.read+customers.read_write+orders.read_write+branches.read+categories.read+brands.read+products.read+webhooks.read_write+payments.read+taxes.read+specialoffers.read+countries.read+metadata.read_write+offline_access&redirect_uri=http://localhost:5000/salla/authCallback
+Content-Type: application/x-www-form-urlencoded
+
+{
+    "grant_type":"authorization_code"
+}
