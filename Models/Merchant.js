@@ -23,15 +23,16 @@ const MerchantSchema = new mongoose.Schema({
         created_at: Date
     },
     password : String,
-    plan : String,
-    active: Boolean,
+    active: {default:true,type:Boolean},
     token:{
         access_token:String,
         refresh_token:String,
         expires_in:Number,
         scope:String,
         token_type:String
-    }
+    },
+    TrialStartDate:{default:Date.now(),type:String},
+    plan:{default:"trial",type:String}
 })
 
 module.exports = mongoose.model("Merchant",MerchantSchema)
