@@ -1,13 +1,13 @@
 const express = require('express')
-const connectionString = "mongodb://localhost:27017/salla"
+const connectionString = "mongodb://localhost:27017/fitness"
 const app = express()
 const mongodb = require("mongoose")
 // const fs = require('fs');
 const CustomError = require("./Views/Response/CustomError.js")
-const Merchant  = require('./Models/Merchant.js');
+const Merchant  = require('./Models/User.js');
 const cors = require('cors')
 
-const merchantRoute = require('./Routes/Merchant.js')
+const UserRoute = require('./Routes/User.js')
 
 app.use(cors({origin:"*"}))
 
@@ -25,23 +25,13 @@ try {
 
 app.use(express.json())
 
-app.use('/Merchant' ,merchantRoute)
+app.use('/User' ,UserRoute)
 
-app.post('/salla/authTest',async(req,res)=>{
-    try {
-        let merchant = await Merchant.findById(req.body.id);
-        
-        res.status(200).json({
-            success:true,
-            merchant:merchant
-        })
-        return;
-    } catch (error) {
-        console.log(error.stack)
-        CustomError(res,"error getting merchant",error.stack,500)
-        return
-    }
-    return
+app.get('/hello',async(req,res)=>{
+    res.status(200).json({
+        success:true,
+        message: "hello"
+    })
 })
 
 let PORT = process.env.PORT

@@ -34,6 +34,88 @@ Content-Type: application/x-www-form-urlencoded
     "grant_type":"authorization_code"
 }
 ###
+POST http://localhost:5000/User/Register
+Content-Type: application/json
+
+{
+    "email":"fear",
+    "password":"123",
+    "username":"fear"
+}
+###
+
+POST http://localhost:5000/User/Login
+Content-Type: application/json
+
+{
+    "email":"fear",
+    "password":"123"
+}
+###
+GET http://localhost:5000/User/
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+
+POST  http://localhost:5000/User/SetInfo
+Content-Type: application/json
+
+{
+   "userInfo":{
+    "heigth": 123,
+    "weight":12,
+    "fat":"low",
+    "gender":"male"
+   },
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+
+POST  http://localhost:5000/User/SetGoal
+Content-Type: application/json
+
+{
+   "goal":"build muscle",
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+POST  http://localhost:5000/User/AddIntake
+Content-Type: application/json
+
+{
+   "Intake": {
+       "id":"asndkas12312"
+   },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+
+
+POST  http://localhost:5000/User/RemoveIntake
+Content-Type: application/json
+
+{
+   "Intake": {
+       "id":"a"
+   },
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+
+GET  http://localhost:5000/User/GetIntakes
+Content-Type: application/json
+
+{
+  
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+}
+###
+GET http://localhost:5000/hello
+
+###
 
 POST https://accounts.salla.sa/oauth2/token?client_id=c10497bda6abad559d6f71cd2eb47e6d&client_secret=a4e2fded03f6996afb0721be26227f58&code=h3B6K-9C7dfe0mKDSvAKHODtWnxG_uBGbMyGjNfebgI.8uSnMtvDQGQNi4M4pzH01N3sBmRSrz-gIoK3ej6tHHc&grant_type=authorization_code&scope=settings.read+customers.read_write+orders.read_write+branches.read+categories.read+brands.read+products.read+webhooks.read_write+payments.read+taxes.read+specialoffers.read+countries.read+metadata.read_write+offline_access&redirect_uri=http://localhost:5000/salla/authCallback
 Content-Type: application/x-www-form-urlencoded
@@ -41,3 +123,9 @@ Content-Type: application/x-www-form-urlencoded
 {
     "grant_type":"authorization_code"
 }
+
+###
+
+GET http://localhost:5000/User/GetIntakes
+
+
