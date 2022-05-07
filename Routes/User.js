@@ -16,7 +16,7 @@ var unless = function(middleware, ...paths) {
 router.use(unless(UserAuthMiddleWare, "/Login","/Register"));
 router.post("/Login",async (req,res)=>{
     const {  email, password } = req.body;
-
+    console.log(req.body)
     // Validate user input
     if (!(email && password)) {
       res.status(400).send("Email or password is missing");
@@ -27,7 +27,7 @@ router.post("/Login",async (req,res)=>{
 
         let user = await User.findOne({email});
         if(user==null){
-            error(res,"No user Found","Merchant user not found in db",404)
+            error(res,"No user Found"," user not found in db",404)
             return
         }
         let passCorrect = await bcrypt.compare(password,user.password);
@@ -84,14 +84,24 @@ router.post("/Register",async (req,res)=>{
         error(res,'required data missing',"User email or password missing")
         return;
     }
-  
+    try {
 
-    
-   
+        let user = await User.findOne({email});
+        if(user!==null){
+            error(res,"User Already Exist"," User Already Exists",404)
+            return
+        }
+       
+    } catch (err) {
+        console.log(err)
+        error(res,"error Loging ",err,500)
+        return;
+    }
     hashedPassword = await bcrypt.hash(password,10);
     let user = new User({
         email:email,
-        password : hashedPassword
+        password : hashedPassword,
+        username:req.body.username
     })
     await user.save()
     const token = await jwt.sign(
@@ -101,9 +111,11 @@ router.post("/Register",async (req,res)=>{
             expiresIn: "10d"
         }
     )
+    user.password = null;
     res.status(200).json({
         success:true,
-        token:token
+        token:token,
+        user:user
     })
     return
     
@@ -112,13 +124,12 @@ router.post("/Register",async (req,res)=>{
 router.post("/SetInfo",async (req,res)=>{
     
     try {
-
         let user = await User.findById(req.user.user_id);
         if(user==null){
             error(res,"No user Found","Merchant user not found in db",404)
             return
         }
-        if(helpers.isBad(req.body.userInfo)){
+        if(helpers.isBad(req.body.userInfo,true)){
             error(res,`No userInfo Provided Schema    info : 
             {
                 heigth: Number,
@@ -129,8 +140,13 @@ router.post("/SetInfo",async (req,res)=>{
             }`,error,400)
             return;
             }
-            user.info = req.body.userInfo;
+            console.log(req.body.userInfo)
             
+            user.info.weight = req.body.userInfo.weight
+            user.info.height = req.body.userInfo.height
+            user.info.age = req.body.userInfo.age
+            user.info.fat = req.body.userInfo.fat
+            user.info.gender = req.body.userInfo.gender
             await user.save()
 
             res.status(200).json({
@@ -162,7 +178,7 @@ router.post("/SetGoal",async (req,res)=>{
             return;
             }
             user.info.goal = req.body.goal;
-            
+            console.log(req.body.goal)
             await user.save()
 
             res.status(200).json({

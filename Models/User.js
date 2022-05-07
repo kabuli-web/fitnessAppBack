@@ -7,10 +7,12 @@ const UserSchema = new mongoose.Schema({
     name : String,
     email : String,
     mobile : String,
+    username:String,
     info : 
     {
-        heigth: Number,
+        height: Number,
         weight:Number,
+        age:Number,
         fat:String,
         goal:String,
         gender:String

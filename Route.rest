@@ -56,7 +56,7 @@ GET http://localhost:5000/User/
 Content-Type: application/json
 
 {
-   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 
@@ -70,7 +70,7 @@ Content-Type: application/json
     "fat":"low",
     "gender":"male"
    },
-   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 
@@ -79,7 +79,7 @@ Content-Type: application/json
 
 {
    "goal":"build muscle",
-   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 POST  http://localhost:5000/User/AddIntake
@@ -89,7 +89,7 @@ Content-Type: application/json
    "Intake": {
        "id":"asndkas12312"
    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 
@@ -101,7 +101,7 @@ Content-Type: application/json
    "Intake": {
        "id":"a"
    },
-   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 
@@ -110,7 +110,7 @@ Content-Type: application/json
 
 {
   
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NDlhYmU4Y2FhOWU3OTc5YmUxYTA3IiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODA5MDM1LCJleHAiOjE2NTI2NzMwMzV9.UiiY-8r4Ygw-0jtrIlgn7xLHupEv7oqzCIPFFQh-4r4"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjI3NWQ4OTUyNWFkMzhlYmRmOTI2ODBjIiwiZW1haWwiOiJmZWFyIiwiaWF0IjoxNjUxODkwMzI1LCJleHAiOjE2NTI3NTQzMjV9.m-ss8xM5FvI--hn0ZoHQZxik4UDVzQJx8yBZwfZ2PZk"
 }
 ###
 GET http://localhost:5000/hello
