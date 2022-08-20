@@ -9,7 +9,7 @@ const cors = require('cors')
 
 const UserRoute = require('./Routes/User.js')
 
-app.use(cors({origin:"*"}))
+app.use(cors())
 
 require('dotenv').config()
 const connectionString = process.env.MONGO_DB
