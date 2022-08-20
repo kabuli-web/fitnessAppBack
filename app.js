@@ -1,5 +1,5 @@
 const express = require('express')
-const connectionString = "mongodb://localhost:27017/fitness"
+
 const app = express()
 const mongodb = require("mongoose")
 // const fs = require('fs');
@@ -12,6 +12,7 @@ const UserRoute = require('./Routes/User.js')
 app.use(cors({origin:"*"}))
 
 require('dotenv').config()
+const connectionString = process.env.MONGO_DB
 try {
     mongodb.connect(connectionString,{useNewurlParser:true},(err)=>{
         if(err!=null){
